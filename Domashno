@@ -1,0 +1,49 @@
+zadacha 1
+import java.util.Scanner;
+
+import static java.lang.System.*;
+
+public class scratch{
+    public static void main(String[] args) {
+        Scanner scan = new Scanner (System.in);
+
+        int number = scan.nextInt();
+        int sum = 0;
+        for(int i = 0; i <number; i++) {
+            int chislo = scan.nextInt();
+            sum = sum + chislo;
+        }
+        System.out.println(sum);
+    }
+}
+
+
+zadacha 2
+import java.util.Scanner;
+
+import static java.lang.System.*;
+
+public class scratch {
+    public static void main(String[] args) {
+        for (int i = 0; i <= 100; i++) {
+            if(i % 2 == 1){
+                System.out.println(i);
+            }
+        }
+    }
+}
+
+zadacha 3
+import java.util.Scanner;
+
+import static java.lang.System.*;
+
+public class scratch{
+    public static void main(String[] args) {
+        for (int i = 100; i <= 1000; i++) {
+            if(i % 2 == 0){
+                System.out.println(i);
+            }
+        }
+    }
+}
