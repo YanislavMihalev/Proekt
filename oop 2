@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class oop 2 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n = 3;
+        int[][] array = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.println("Enter array[" + i + "][" + j + "]=");
+                array[i][j] = scan.nextInt();
+            }
+        }
+        int mainSum = 0, secondSum = 0;
+        for (int i = 0; i < n; i++) {
+            mainSum += array[i][i];
+        }
+        for (int i = 0; i < n; i++) {
+            secondSum += array[i][n - 1 - i];
+        }
+        System.out.println("Main Diagonal Sum: " + mainSum);
+        System.out.println("Second Diagonal Sum: " + secondSum);
+        scan.close();
+    }
+}
