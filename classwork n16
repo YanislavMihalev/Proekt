@@ -1,0 +1,67 @@
+import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Dictionary;
+import java.util.Enumeration;
+import java.util.Hashtable;
+public class scratch_1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Dictionary<Integer, String> MyDictionary = new Hashtable();
+        MyDictionary.put(1,"Apple");
+        MyDictionary.put(2,"Banana");
+        MyDictionary.put(3,"Orange");
+        MyDictionary.put(4,"Avocado");
+        /*
+         * MyDictionary.put("AP", "Apple");
+         * MyDictionary.put("BA", "Banana");
+         * MyDictionary.put("OR", "Orange");
+         * MyDictionary.put("AV", "Avocado");
+         *
+         *
+         *
+         */
+        //
+        System.out.println();
+        System.out.println("\nSize of my_dict :" + MyDictionary.size());
+        
+        System.out.println("Value at key = 1 :" +MyDictionary.get(1));
+        System.out.println("Value at key = 2 :" +MyDictionary.get(2));
+        System.out.println("Value at key = 3 :" +MyDictionary.get(3));
+        System.out.println("Value at key = 4 :" +MyDictionary.get(4));
+
+        System.out.println("Before removing elements : " + MyDictionary);
+
+        System.out.println("By FOR-CYCLE :");
+        for(int i = 1; i <= MyDictionary.size(); i++) {
+            System.out.println("MyDict element :" + MyDictionary.get(i));
+        }
+        System.out.println("By Enumeration - KEYS :");
+        for(Enumeration items = MyDictionary.keys(); items.hasMoreElements(); ) {
+            System.out.println("KEYS in Dictionary: " + items.nextElement());
+        }
+        System.out.println("By Enumeration - VALUES:");
+        for (Enumeration items = MyDictionary.elements(); items.hasMoreElements();) {
+            System.out.println("VALUES in Dictionary :" + items.nextElement());
+        }
+        System.out.println("\nIS my dictionary empty? :" + MyDictionary.isEmpty() + "\n");
+
+        MyDictionary.remove(1);
+        MyDictionary.remove(2);
+
+        MyDictionary.remove("BA");
+        MyDictionary.remove("AV");
+
+
+        System.out.println("Checking if the removed value exists(by integer key) :" + MyDictionary.get(1));
+        System.out.println("Checking if the removed value exists(by integer key) :" + MyDictionary.get(2));
+        System.out.println("Checking if the removed value exists(by integer key) :" + MyDictionary.get(3));
+
+        System.out.println("Checking if the removed value exists (by string key) : " + MyDictionary.get("BA"));
+        System.out.println("Checking if the removed value exists (by string key) : " + MyDictionary.get("AV"));
+        System.out.println("Checking if the removed value exists (by string key) : " + MyDictionary.get("AP"));
+
+        System.out.println("After removing elements : " + MyDictionary);
+
+        System.out.println("\nSize of my_dict removing elements : " + MyDictionary.size());
+    }
+}
